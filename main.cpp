@@ -11,7 +11,6 @@
 
 int main() {
 
-    //burning ship fractal 
 	int maxItr = 1000; //the maximum number of iterations
 	char* colorOutput = (char *)malloc(3*width*height*sizeof(char));
 	for (int row = 0; row < height; row++) { //cols
@@ -23,7 +22,7 @@ int main() {
 			double h = 0;
 			while ((z.real*z.real + z.imag*z.imag) < 4 && iter < maxItr) { //go through iterations
 				//complex zabs(std::abs(z.real), std::abs(z.imag));  //burning ship
-				complex zabs(z.real, z.imag);  //tricorn
+				complex zabs(z.real, -1*z.imag);  //tricorn
 				//complex zabs(z.real, z.imag);  //mandlebrot
 				z = (zabs * zabs) + c;
 				iter++;
