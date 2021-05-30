@@ -15,7 +15,7 @@ int main() {
 	char* colorOutput = (char *)malloc(3*width*height*sizeof(char));
 	for (int row = 0; row < height; row++) { //cols
 		for (int col = 0; col < width; col++) {  //rows
-			complex z(0,0); //for burning ship, z0 = 0, so we can use the default constructor
+			complex z(0,0); //for these fractals, z0 is always 0
 			complex c(double(col)*(4/double(width))-2, double(row)*(4/double(height))-2); // c is initialized to coordinates
 			int iter = 0; 
 			std::vector<int> colorRGB;
